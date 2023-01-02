@@ -1,4 +1,4 @@
-= 캠퍼스 핵데이 Java 코딩 컨벤션
+= Switchwon Java 코딩 컨벤션
 :toc:
 
 * 문서 : https://naver.github.io/hackday-conventions-java/
@@ -60,10 +60,15 @@ indent_style = tab
 == 문서 빌드 & 배포
 
 === 문서 빌드
+Project JDK 버전을 `JDK 1.8` 로 설정합니다.
+
 `./gradlew build` 를 수행하면 `build/asciidoc/index.html` 경로에 가이드 문서가 생성됩니다.
+또는, IntelliJ에서 오른쪽 gradle box에서 buikd -> build 를 찾아 더블클릭합니다.
 
 === 문서 배포
 https://github.com/ajoberstar/gradle-git-publish[gradle-git-publish] 플러그인을 이용해서 GitHub Pages로 배포됩니다.
+
+`build.gradle` 에서 `gitPublish` block을 스위치원 프로젝트에 맞게 수정합니다.
 
 `./gradlew gitPublishPush` 을 실행하면 `{프로젝트 홈}/build/gitPublish` 디렉토리에 gh-pages 브랜치와 연결된 Local Git repoisitory가 생깁니다.
 
@@ -75,3 +80,6 @@ https://github.com/ajoberstar/gradle-git-publish[gradle-git-publish] 플러그�
 ----
 
 또는 OS의 환경변수에 `GRGIT_USER` 변수에 token값을 설정해도 됩니다.
+
+== Reference & Fork from
+https://github.com/naver/hackday-conventions-java
