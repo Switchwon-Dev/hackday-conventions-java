@@ -19,8 +19,8 @@ asciidoctor {
 }
 
 gitPublish {
-    repoUri = 'git@github.com:naver/hackday-conventions-java.git'
-    branch = 'gh-pages'
+    repoUri = 'git@github.com:switchwon-dev/exchange_app_back.git'
+    branch = 'pages'
     contents {
         from(asciidoctor.outputDir) {
             into '.'
