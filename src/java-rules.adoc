@@ -16,11 +16,24 @@ _[avoid-korean-pronounce]_
 - 나쁜 예 : `moohyungJasan` (무형자산)
 - 좋은 예 : `intangibleAssets` (무형자산)
 
+[id="follow-grammer-rules"]
+=== 올바른 영어문법 사용
+문법에 맞지 않는 영어를 사용하지 않는다.
+
+getter, setter 를 사용하면서 동사가 중복되지 않도록 한다.
+또는, entity 등을 바로 목적어로 사용하여 제3자가 이해하기 어려운 문장으로 만들지 않는다.
+
+withdraw 클래스 또는 필드의 값을 가져올 때 (이 예제는 withdraw가 클래스와 필드명인 것 자체가 문제다)
+
+- 나쁜 예 : `getWithdraw`
+- 좋은 예 : `getWithdrawalHistory` (출금내역을 가져오다)
+
 [id="list-uppercase-abbr"]
 === 대문자로 표기할 약어 명시
 _[list-uppercase-abbr]_
 
 클래스명, 변수명에 쓰일 단어 중 모든 글자를 대문자로 표기할 약어의 목록을 프로젝트별로 명시적으로 정의한다.
+스위치원에서는 스위치원에서만 사용하는 약어만을 전부 대문자로 표기한다.
 
 약어의 대소문자 표기는 JDK의 클래스나 라이브러리들 사이에서도 일관된 규칙이 없다.
 `javax.xml.bind.annotation.XmlElement`처럼 약어를 소문자로 표기하기도 하고, `java.net.HttpURLConnection`처럼 한 클래스 안에서 단어별로 다르게 쓰기도 했다.
@@ -36,6 +49,9 @@ HTTP + API + URL 의 클래스 이름의 경우
 * 대문자로 표기할 약어의 목록을 정의하지 않는 경우 : HttpApiUrl
 * API만 대문자로 표기할 약어의 목록에 있을 경우 : HttpAPIUrl
 * HTTP, API, URL이 대문자로 표기할 약어의 목록에 있을 경우 : HTTPAPIURL
+
+==== 스위치원 대문자로 표기할 약어 리스트
+-
 
 [id="package-lowercase"]
 === 패키지 이름은 소문자로 구성
@@ -179,6 +195,31 @@ HtmlParser p = new HtmlParser();
 HtmlParser parser = new HtmlParser();
 ----
 
+[id="use-transive-verb"]
+=== 파라미터가 있을 경우 메소드는 타동사를 사용
+파라미터를 목적어로 사용하고 메소드는 타동사를 사용하여 시그니처가 하나의 문장이 되도록 한다.
+
+[id="use-plural-form"]
+=== Array, List, Map 과 같은 Collection 의 이름은 복수형을 사용
+복수의 동일한 타입의 아이템을 저장하고 있는 Collection의 경우 postfix로 List, Data 를 쓰지 않는다.
+구문이 자연스럽도록 복수형을 쓴다.
+
+다만, 명사 자체가 집합의 의미를 가지는 경우 단수로 사용한다.
+
+예) Dictionary, Store
+
+[source,java]
+.나쁜 예
+----
+ArrayList<String> nameList = new ArrayList<String>();
+----
+
+[source,java]
+.좋은 예
+----
+ArrayList<String> names = new ArrayList<String>();
+----
+
 [id="declarations"]
 == 선언 (Declarations)
 클래스, 필드, 메서드, 변수값, import문 등의 소스 구성요소를 선언할 때 고려해야할 규칙이다.
@@ -229,6 +270,17 @@ import java.util.*;
 import java.util.List;
 import java.util.ArrayList;
 ----
+
+[id="import-ordering-spacing"]
+=== import 순서
+
+* Imports의 순서는 다음과 같다.
+1. 단일 블록에서 모든 static imports
+2. 단일 블록에서 모든 non-static imports
+
+* static과 non-static이 모두 있는 경우, 하나의 빈 줄이 두 블록을 구분한다.
+* import 문 사이에는 다른 빈 줄이 없다.
+* 각 블록 내에는 이름이 ASCII 정렬 순서로 정렬된다.
 
 [id="modifier-order"]
 === 제한자 선언의 순서
