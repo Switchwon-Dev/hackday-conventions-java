@@ -663,7 +663,7 @@ public boolen isAbnormalAccess (
 
 [id="blank-lines)"]
 == 빈 줄(Blank lines)
-빈 줄은 명령문 그룹의 영역을 표시하기 위하여 사용한다.
+빈 줄은 명령문 그룹의 영역을 표시하기 위하여 사용한다. 아래의 경우 외에는 빈 줄을 넣지 않는다.
 
 [id="blankline-after-package"]
 === `package` 선언 후 빈 줄 삽입
@@ -731,6 +731,29 @@ public void setId(int id) {
 
 public void setName(String name) {
     this.name = name;
+}
+----
+
+[id="blankline-between-variable-and-method"]
+=== 변수와 메소드 사이에 빈 줄 삽입
+_[blankline-between-variable-and-method]
+
+멤버 변수와 메소드 사이에는 빈 줄을 넣는다.
+
+[source,java]
+.좋은 예
+----
+class User {
+    int id = 0;
+    String name = "name";
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
 ----
 
