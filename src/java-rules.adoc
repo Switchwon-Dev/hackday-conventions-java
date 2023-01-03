@@ -18,6 +18,8 @@ _[avoid-korean-pronounce]_
 
 [id="follow-grammer-rules"]
 === 올바른 영어문법 사용
+_[follow-grammer-rules]_
+
 문법에 맞지 않는 영어를 사용하지 않는다.
 
 getter, setter 를 사용하면서 동사가 중복되지 않도록 한다.
@@ -50,7 +52,7 @@ HTTP + API + URL 의 클래스 이름의 경우
 * API만 대문자로 표기할 약어의 목록에 있을 경우 : HttpAPIUrl
 * HTTP, API, URL이 대문자로 표기할 약어의 목록에 있을 경우 : HTTPAPIURL
 
-==== 스위치원 대문자로 표기할 약어 리스트
+==== 스위치원 코드에서 대문자로 표기할 약어 리스트
 -
 
 [id="package-lowercase"]
@@ -201,6 +203,8 @@ HtmlParser parser = new HtmlParser();
 
 [id="use-plural-form"]
 === Array, List, Map 과 같은 Collection 의 이름은 복수형을 사용
+_[use-plural-form]_
+
 복수의 동일한 타입의 아이템을 저장하고 있는 Collection의 경우 postfix로 List, Data 를 쓰지 않는다.
 구문이 자연스럽도록 복수형을 쓴다.
 
