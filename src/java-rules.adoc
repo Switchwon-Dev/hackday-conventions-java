@@ -197,10 +197,6 @@ HtmlParser p = new HtmlParser();
 HtmlParser parser = new HtmlParser();
 ----
 
-[id="use-transive-verb"]
-=== 파라미터가 있을 경우 메소드는 타동사를 사용
-파라미터를 목적어로 사용하고 메소드는 타동사를 사용하여 시그니처가 하나의 문장이 되도록 한다.
-
 [id="use-plural-form"]
 === Array, List, Map 과 같은 Collection 의 이름은 복수형을 사용
 _[use-plural-form]_
