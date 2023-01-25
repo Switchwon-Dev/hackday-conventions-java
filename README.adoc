@@ -83,3 +83,4 @@ https://github.com/ajoberstar/gradle-git-publish[gradle-git-publish] 플러그�
 
 == Reference & Fork from
 https://github.com/naver/hackday-conventions-java
+
